@@ -35,8 +35,19 @@ source .venv/bin/activate
 git clone https://github.com/epicRE/ecosense-EcoQube/
 cd ecosense-EcoQube
 pip3 install -r requirements.txt
+python3 ecoqube_ble.py
+```
+
+```bash
+usage: ecoqube_ble.py [-h] [--seconds SECONDS] [--address ADDRESS] {scan,info,setup} ...
+ecoqube_ble.py: error: the following arguments are required: command
+```
+
+Let's scan for device(s):
+```bash
 python3 ecoqube_ble.py scan
 ```
+
 You will be presented with a list of devices (depends on what is in range):
 ```bash
 FR:EQ:JF10EQ00XXXX  5410156B-7BF5-E489-5288-0769BB6196A9
