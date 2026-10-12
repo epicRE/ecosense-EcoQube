@@ -5,6 +5,20 @@ services:
       dockerfile: docker/Dockerfile
     image: ecoqube-server:latest
     restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 100
+    mem_limit: 256m
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
     ports:
       - "${HOST_PORT:-443}:8443"
     environment:
