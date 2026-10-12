@@ -250,6 +250,13 @@ This is the body of the JSON
 }
 ```
 
+## Test PUT request 
+(send to [ecoqube-web2mqtt-server.py](ecoqube-web2mqtt-server.py))
+
+```bash
+curl -sk --retry 10 --retry-connrefused -o /dev/null -w "%{http_code}\n" -X PUT -H "Content-Type: application/json" --data '{"serial_number":"JF10EQ001001","d_type":0,"p_time":0,"d_status":0,"radon_level":0,"radon_dou":0,"c_factor":1.17,"fw_version":"1.1.X"}' https://127.0.0.1:8443/api/v1/radon;
+```
+
 # Attribution
 https://github.com/epicRE/ecosense-EcoQube/ by EpicRE (2026)
 
