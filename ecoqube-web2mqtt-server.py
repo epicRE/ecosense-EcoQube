@@ -205,7 +205,7 @@ class TLSServer(http.server.ThreadingHTTPServer):
         else:
             super().handle_error(request, client_address)
 
-
+# Cert is valid for 1825 days = 5 years
 def ensure_cert(cert, key):
     if cert.exists() and key.exists():
         return
@@ -214,7 +214,7 @@ def ensure_cert(cert, key):
     subprocess.run(
         [
             "openssl", "req", "-x509", "-newkey", "rsa:2048", "-nodes",
-            "-keyout", str(key), "-out", str(cert), "-days", "365",
+            "-keyout", str(key), "-out", str(cert), "-days", "1825",
             "-subj", "/CN=localhost",
             "-addext", "subjectAltName=DNS:localhost,IP:127.0.0.1",
         ],
