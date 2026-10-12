@@ -9,7 +9,7 @@ git clone https://github.com/epicRE/ecosense-EcoQube.git
 cd ecosense-EcoQube
 ```
 
-If you already have a clone, update it instead:
+OR: If you already have a clone, update it instead:
 
 ```sh
 cd ecosense-EcoQube
