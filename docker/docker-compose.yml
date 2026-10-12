@@ -1,0 +1,18 @@
+services:
+  ecoqube-server:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: ecoqube-server:latest
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-443}:8443"
+    environment:
+      MQTT_HOST: ${MQTT_HOST:-}
+      MQTT_PORT: ${MQTT_PORT:-1883}
+      MQTT_USERNAME: ${MQTT_USERNAME:-}
+      MQTT_PASSWORD: ${MQTT_PASSWORD:-}
+      PUT_LOG: ${PUT_LOG:-off}
+    volumes:
+      - ../data:/app/data
+      - ../certs:/app/certs
