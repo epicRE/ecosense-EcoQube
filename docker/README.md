@@ -24,6 +24,7 @@ The compose file mounts `../data` and `../certs`, so create them next to `docker
 
 ```sh
 mkdir -p data certs
+sudo chown -R 10001:10001 ./certs ./data
 ```
 
 **3. Configure the environment**
