@@ -24,7 +24,7 @@ Part 2:
 * Docker (or just run the [ecoqube-web2mqtt-server.py](ecoqube-web2mqtt-server.py))
 * A system (Linux) listening on 443 (or use a redirect service like nginx etc) 
 * DNS Rewriting service (i.e., AdGuard, local DNS etc) for 'api.cloud.ecosense.io'
-* Home Assistant with a MQTT server
+* Home Assistant with a MQTT server (IP address and port needed)
   
 # How to connect and setup the device (step one)
 
@@ -103,9 +103,12 @@ API URL main:   https://api.cloud.ecosense.io
 API URL sub:    /api/v1/radon
 ```
 
-# Setup a local web server (with TLS) that will accept and send the readings to an MQTT server (step two)
+# Setup a local web server (with TLS) that will accept and send the readings to an MQTT server (docker) (step two)
 
-Check the docker [docker/README.md](docker/README.md)
+1. Set the DNS rewrite to the server (i.e., it will need 443 exposed) where you will host the Docker container or the Python script.
+2. Check the docker [docker/README.md](docker/README.md) for details of how to set every up.
+3. Feel free to report any issues.
+4. Enjoy!
 
 # Extra information (the details)
 
