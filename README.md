@@ -7,7 +7,7 @@ Self-hosted local-only EcoQube by Ecosense
 ## Introduction
 This repo is about the EcoQube from Ecosense ([https://ecosense.io/products/ecoqube](https://ecosense.io/products/ecoqube)). 
 
-Inspired by https://github.com/starsoccer/ecosense/ the process below will remove Ecosense mobile application and the backend.
+Inspired by https://github.com/starsoccer/ecosense/ the process below will remove Ecosense mobile application and the backend requirements (i.e., you don't need them).
 
 I provide all the information needed for you to setup and run the EcoQube without any account or connection to the Ecosense backend.
 
